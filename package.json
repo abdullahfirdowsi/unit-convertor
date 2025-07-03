@@ -1,0 +1,17 @@
+{
+  "name": "unit-converter-fullstack",
+  "version": "1.0.0",
+  "description": "Full-stack unit converter with Angular, Node.js, and MongoDB",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "server:dev": "cd server && npm run dev",
+    "client:dev": "cd client && npm start",
+    "build": "cd client && npm run build && cd ../server && npm run build",
+    "start": "cd server && npm start",
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install",
+    "cpp:build": "cd server/cpp && g++ -o unit_converter unit_converter.cpp"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
